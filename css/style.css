@@ -1,3 +1,8 @@
-#test {
-    color: dodgerblue;
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../assets/images/mind-the-troll-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
