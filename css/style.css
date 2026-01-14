@@ -1,8 +1,19 @@
 body {
-    min-height: 100vh;
-    margin: 0;
     background-image: url("../assets/images/mind-the-troll-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*------------Ttle------------------*/
+
+h1 {
+    color: gold;
+    text-align: center;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    font-size: 50px;
+    font-weight: 1000;
+    padding: 26px 18px 6px;
 }
