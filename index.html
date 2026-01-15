@@ -18,28 +18,48 @@
     <main>
 
         <!-- HUD Info -->
-        <section>
+        <section class="hud">
 
-            <!--Matches-->
-            <div> </div>
+            <div class="hud-bar">
 
-            <!--Wrong Guesses Left-->
-            <div></div>
+                <!--Matches-->
+                <div class="hud-item"> 
 
-            <!--Reset Button-->
-            <div></div>
+                    <p>Matches: <span>0</span>/6</p>
 
-            <!--Messages-->
-            <div></div>
+                </div>
+
+                <!--Wrong Guesses Left-->
+                <div class="hud-item">
+
+                    <p>Wrong Guesses Left: <span>6</span></p>
+
+                </div>
+
+                <!--Reset Button-->
+                <div class="hud-actions">
+
+                    <button id="reset-btn" class="btn" type="button">Reset</button>
+
+                </div>
+
+             </div>
+                
+             <!--Messages-->
+            <div class="hud-message">
+
+                <p class="message">Flip two cards. Match all 6 pairs to cross the bridge. You have <strong>6</strong> wrong guesses before the troll eats you.</p>
+                
+            </div>
 
         </section>
 
         <!--Game Board-->
-        <Section>
+        <section>
 
             <div></div>
 
-        </Section>
+        </section>
 
     </main>
 

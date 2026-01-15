@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-/*------------Ttle------------------*/
+/*------------Title------------------*/
 
 h1 {
     color: gold;
@@ -16,4 +16,64 @@ h1 {
     font-size: 50px;
     font-weight: 1000;
     padding: 26px 18px 6px;
+    animation: glow 2.5s;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+    }
+
+    to {
+        text-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
+    }
+}
+
+/*--------------HUD-----------------*/
+
+.hud-bar {
+    background: rgba(0, 0, 0, 0.55);
+    color: whitesmoke;
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 9px 16px;
+
+    display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+}
+
+.hud-bar p {
+    margin: 0;
+}
+
+.message {
+    background: rgba(0, 0, 0, 0.55);
+    color: whitesmoke;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 16px;
+    border-radius: 16px;
+}
+
+.message strong {
+    color: red;
+}
+
+.btn {
+    border: 0;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
 }
