@@ -16,10 +16,10 @@ h1 {
     font-size: 50px;
     font-weight: 1000;
     padding: 26px 18px 6px;
-    animation: glow 2.5s;
+    animation: text-glow 2.5s forwards;
 }
 
-@keyframes glow {
+@keyframes text-glow {
     from {
         text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
     }
@@ -102,15 +102,21 @@ h1 {
     background: gold;
     margin: 5px;
     display: inline-block;
+    animation: card-glow 2.5s forwards;
 
-    /* Center Text */
-    text-align: center;
-    line-height: 100px;
-
-    font-size: 32px;
-    font-weight: bold;
+   
     cursor: pointer;
 }
+
+@keyframes card-glow {
+    from {
+        box-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
+    }
+
 
 
 
