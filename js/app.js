@@ -73,3 +73,14 @@ function shuffle(array) {
   return array;
 }
 
+//Updates HUD
+function render() {
+    // String() converts whatever is inside it into a string.
+  matchesEl.textContent = String(matchesFound);
+
+  const wrongLeft = totalWrongGuesses - wrongGuessesMade;
+  wrongGuessesLeftEl.textContent = String(wrongLeft);
+
+  trollMessageEl.textContent = getTrollMessage();
+}
+
