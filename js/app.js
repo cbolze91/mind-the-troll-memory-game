@@ -84,3 +84,15 @@ function render() {
   trollMessageEl.textContent = getTrollMessage();
 }
 
+function getTrollMessage() {
+  if (gameStatus === "Won") return "You matched all the gems. The troll lets you pass. 🧌✨";
+  if (gameStatus === "Lost") return "No guesses left... the troll feasts. 🧌🍽";
+
+  const wrongLeft = totalWrongGuesses - wrongGuessesMade;
+
+  if (wrongLeft === totalWrongGuesses) return "Flip two cards. Match 6 pairs to cross the bridge. You have 6 wrong guesses before the troll eats you.";
+  if (wrongLeft <= 2) return "Careful… the troll is getting hungry.";
+  return `Choose wisely. You have ${wrongLeft} wrong guesses left.`;
+}
+
+
