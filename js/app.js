@@ -58,4 +58,18 @@ function buildDeck() {
   });
 }
 
+//Fisher-Yates shuffle (shuffles an array)
+function shuffle(array) {
+    // loops through the array backwards starting with the last element.
+  for (let i = array.length - 1; i > 0; i--) {
+    //chooses.  random index (j) math.random chooses a decimal between 0 an 1, 
+    // (i+1) sclaes it to i, 
+    // then math. floor rounds the number DOWN to a whole number
+    // so j is a randome number between 0 and i
+    const j = Math.floor(Math.random() * (i + 1));
+    //swaps the elements at positions i and j
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
