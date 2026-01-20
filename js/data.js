@@ -5,7 +5,7 @@
 
 const cards = [
   { name: "red", cardValue: "../assets/images/red-gem.png" },
-  { name: "blue", cardValue: "assets/images/blue-gem.png" },
+  { name: "blue", cardValue: "../assets/images/blue-gem.png" },
   { name: "diamond", cardValue: "../assets/images/diamond-gem.png" },
   { name: "green", cardValue: "../assets/images/green-gem.png" },
   { name: "orange", cardValue: "../assets/images/orange-gem.png" },
