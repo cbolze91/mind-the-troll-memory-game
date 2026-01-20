@@ -278,4 +278,7 @@ function checkForMatch() {
   }, 850);
 }
 
-
+function resetPicks() {
+  firstPickIdx = null;
+  secondPickIdx = null;
+}
