@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mind the Troll Memory Game</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/data.js"></script>
     <script defer src="./js/app.js"></script>
 </head>
 <body>
@@ -48,7 +49,7 @@
              <!--Messages-->
             <div class="hud-message">
 
-                <p class="message" >Flip two cards. Match all 6 pairs to cross the bridge. You have <strong>6</strong> wrong guesses before the troll eats you.</p>
+                <p class="message" id="troll-message" ></p>
                 
             </div>
 
@@ -57,11 +58,7 @@
         <!--Game Board-->
         <section class="game-area">
 
-            <div id="board">
-
-                <div class="card"></div>
-            
-             </div>
+            <div id="board"></div>
             
         </section>
 

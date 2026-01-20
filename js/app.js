@@ -1,60 +1,32 @@
-
 /*-------Constants-------*/
 
-const cards = [
-    { name: "red", cardValue: "../assets/images/red-gem.png", },
-    { name: "blue", cardValue: "../assets/images/blue-gem.png" },
-    { name: "diamond", cardValue: "../assets/images/diamond-gem.png" },
-    { name: "green", cardValue: "../assets/images/green-gem.png" },
-    { name: "orange", cardValue: "../assets/images/orange-gem.png"},
-    { name: "purple", cardValue: "../assets/images/purple-gem.png"},
-];
-
-const cardFront = "../assets/images/card-front.png";
-
-const totalMatches = cards.length;
-
-const totalWrongGuesses = 6;
-
+const totalMatches = cards.length;       // 6 pairs
+const totalWrongGuesses = 6;             // max wrong attempts
 
 /*----------State Variables------*/
 
-let firstPickIdx;
+let firstPickIdx;        // Stores the first card the user picked by index
+let secondPickIdx;       // Stores the second card the user picked by index
+let lockBoard;           // prevents clicking during card flip back
+let wrongGuessesMade;    // How many mismatches so far
+let matchesFound;        // How many pairs found so far
+let gameStatus;          // "Playing" | "Won" | "Lost" prevents clicks after game ends
+let shuffledDeck;         // The full deck of 12 cards, shuffled
 
-let secondPickIdx;
-
-let lockBoard;
-
-let trollMessage;
-
-let wrongGuessesMade;
-
-let matchesFound;
-
-let gameStatus;
-
-let shuffledDeck;
 
 /*--------Cached Elements-----*/
 
-const matchesEl = document.querySelector(".matches");
-
-const wrongGuessesLeftEl = document.querySelector(".guesses-left");
-
-const resetBtnEl = document.querySelector(".reset-btn");
-
-const trollMessageEl = document.querySelector(".message");
-
+const matchesEl = document.querySelector("#matches");
+const wrongGuessesLeftEl = document.querySelector("#guesses-left");
+const resetBtnEl = document.querySelector("#reset-btn");
+const trollMessageEl = document.querySelector("#troll-message");
 const boardEl = document.querySelector("#board");
-
-const cardEl = document.querySelector(".card");
 
 
 /*------------Event Listeners-------------*/
 
-boardEl.addEventListener("click, handleBoardClick");
-
+boardEl.addEventListener("click", handleBoardClick);   // Event delegation
 resetBtnEl.addEventListener("click", init);
 
-
+/*---------- Functions----------*/
 

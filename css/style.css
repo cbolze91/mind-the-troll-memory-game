@@ -3,8 +3,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
-    margin: 0;
+    min-height: 100vh; /* vh is viewport (100% viewport height) */
+    margin: 0; /* removes margin so the background goes edge to edge */
 }
 
 /*------------Title------------------*/
@@ -12,19 +12,30 @@ body {
 h1 {
     color: gold;
     text-align: center;
-    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    /* adds a shadow to the txt. 
+    0 =noleft/right shift (moves nothing)
+    6px = shadow drops down
+    18px = very soft blur
+    rgba = semi-transparent black */
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55); 
     font-size: 50px;
     font-weight: 1000;
-    padding: 26px 18px 6px;
+    padding: 26px 18px 6px; /* Top, Left/right, Bottom */
+    /* Runs animation called text glow over 2.5 seconds
+     and forwards keeps the final state, so it keeps its glow*/
     animation: text-glow 2.5s forwards;
 }
 
+/* @keyframes text-glow is what define the animation,
+creates an animation recipe called text-glow */
 @keyframes text-glow {
     from {
+        /* Small gold glow */
         text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
     }
 
     to {
+        /* brighter gold glow */
         text-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
     }
 }
@@ -35,19 +46,24 @@ h1 {
     background: rgba(0, 0, 0, 0.55);
     color: whitesmoke;
     backdrop-filter: blur(6px);
+    /* Rounds the corner */
     border-radius: 16px;
 
     width:80%;
+    /* Centers the bar horizontally*/
     margin-left: auto;
     margin-right: auto;
+    /* Adds spcing inside*/
     padding: 9px 16px;
 
+    /* Turns this into a felx container so its children can line up easily */
     display: flex;
         justify-content: space-evenly;
         align-items: center;
         gap: 10px;
 }
 
+/* removes default p tag margin and aligns HUD */
 .hud-bar p {
     margin: 0;
 }
@@ -66,15 +82,16 @@ h1 {
     border-radius: 16px;
 }
 
-.message strong {
-    color: red;
-}
 
 .btn {
+    /* removes border default */
     border: 0;
+    /* makes it bigger and clickable*/
     padding: 8px 16px;
+    /* Rounded corners*/
     border-radius: 12px;
     font-weight: 700;
+    /* Hand cursor*/
     cursor: pointer;
 }
 
@@ -88,6 +105,7 @@ h1 {
 
 /* Create Board */
 #board {
+    /* The fixed board width is why the cards wrap into rows */
     width: 400px;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -104,6 +122,12 @@ h1 {
     display: inline-block;
     animation: card-glow 2.5s forwards;
 
+    /* Controlls the images set in js
+    fills the card, keeps the image center, and no tiling*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
    
     cursor: pointer;
 }
@@ -116,6 +140,7 @@ h1 {
     to {
         box-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
     }
+}
 
 
 
