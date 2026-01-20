@@ -95,4 +95,35 @@ function getTrollMessage() {
   return `Choose wisely. You have ${wrongLeft} wrong guesses left.`;
 }
 
+function renderBoard() {
+
+    // Deletes evrycard currently on the board so you can create a new shuffled deck
+  while (boardEl.firstChild) {
+     boardEl.removeChild(boardEl.firstChild);
+  }
+
+  //loops through the shuffledDeck object
+  shuffledDeck.forEach((card, index) => {
+    // creates a button element in HTML for each card 
+    const cardEl = document.createElement("button");
+    // Button attribute so it behaves as a button
+    cardEl.type = "button";
+    //Adds the class card so the cards can be styled
+    cardEl.classList.add("card");
+    // dataset is an object that creates data attribues in HTML.
+    // The index is used to find the card object in sheffledDeck
+    // Use String b/c dataset values are stored as strings in HTML.
+    cardEl.dataset.index = String(index);
+    // aria-label for accessibility
+    cardEl.setAttribute("aria-label", "Face down card");
+
+    // face-down by default
+    // sets inline css on the element
+    cardEl.style.backgroundImage = `url("${cardFront}")`;
+
+    // Use appendChild to put the element onto the page.
+    boardEl.appendChild(cardEl);
+  });
+}
+
 
