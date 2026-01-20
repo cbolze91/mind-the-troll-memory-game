@@ -4,12 +4,12 @@
 // because changes to the deck automatically update the board
 
 const cards = [
-  { name: "red", cardValue: "assets/images/red-gem.png" },
-  { name: "blue", cardValue: "assets/images/blue-gem.png" },
-  { name: "diamond", cardValue: "assets/images/diamond-gem.png" },
-  { name: "green", cardValue: "assets/images/green-gem.png" },
-  { name: "orange", cardValue: "assets/images/orange-gem.png" },
-  { name: "purple", cardValue: "assets/images/purple-gem.png" },
+  { name: "red", cardValue: "../assets/images/red-gem.png" },
+  { name: "blue", cardValue: "../assets/images/blue-gem.png" },
+  { name: "diamond", cardValue: "../assets/images/diamond-gem.png" },
+  { name: "green", cardValue: "../assets/images/green-gem.png" },
+  { name: "orange", cardValue: "../assets/images/orange-gem.png" },
+  { name: "purple", cardValue: "../assets/images/purple-gem.png" },
 ];
 
-const cardFront = "assets/images/card-front.png";
+const cardFront = "../assets/images/card-front.png";
