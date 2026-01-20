@@ -126,4 +126,58 @@ function renderBoard() {
   });
 }
 
+function handleBoardClick(evt) {
+
+    // First block invalid situations 
+    // if the game status is not playing, don't allow clicks
+  if (gameStatus !== "Playing") return;
+  // if lockBoard === true, don't allow clicks
+  if (lockBoard) return;
+
+  // Next find the click 
+  // Using .closest() ensures the correct element is clicked 
+  const cardEl = evt.target.closest(".card");
+  // Ensures that if anything else on the board is clicked nothing happens
+  if (!cardEl) return;
+
+  //Number is a javascript built in function that allows us to turn the index into a number
+  //insetad of a string and then store it in a variable called idx.
+  const idx = Number(cardEl.dataset.index);
+  // Use that index to grab the corresponding card object fromt the shuffled deck.
+  const cardObj = shuffledDeck[idx];
+
+
+// So far we have clicked a .card elemnt in the DOM.
+// retrieved the data-index string
+// turned the data-index into a number to store it as idx,
+// then retrieved the card data
+
+
+  // Next, ignore clicks on matched or already revealed cards
+  if (cardObj.matched) return;
+  if (cardObj.revealed) return;
+
+  // Then reveal the card- defined function below
+  revealCard(idx);
+
+  // if the variable firstPickIdx is null
+  if (firstPickIdx === null) {
+    // change it to the clicked idx
+    firstPickIdx = idx;
+    // Then update the HUD
+    render();
+    return;
+  }
+
+  // prevent picking the same card twice
+  if (idx === firstPickIdx) return;
+
+// Second card click
+  secondPickIdx = idx;
+  lockBoard = true;
+
+  // Check to see if the cards match- function defined below
+  checkForMatch();
+}
+
 
