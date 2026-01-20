@@ -30,3 +30,18 @@ resetBtnEl.addEventListener("click", init);
 
 /*---------- Functions----------*/
 
+init();
+
+function init() {
+  gameStatus = "Playing";
+  lockBoard = false;
+  wrongGuessesMade = 0;
+  matchesFound = 0;
+  firstPickIdx = null;
+  secondPickIdx = null;
+
+  shuffledDeck = shuffle(buildDeck());   // buildDeck makes 12 card objects // shuffle randomizes them  // The result is stored in shuffledDeck
+  renderBoard();   // Create card divs
+  render();        // Update HUD + message
+}
+
