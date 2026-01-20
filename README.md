@@ -197,5 +197,7 @@ I. Reset Button
 
 - Add sound effects for win/lose
 - Add backgroud music
+- Add evil laugh sound effect to start of game
 - Improve Accessibility
+- Add a short intro viseo
 - Add difficulty levels
