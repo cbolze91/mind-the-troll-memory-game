@@ -214,3 +214,68 @@ function getCardElByIndex(idx) {
   return boardEl.querySelector(`.card[data-index="${idx}"]`);
 }
 
+// Called in handleBoardClick
+function checkForMatch() {
+    // Grab the two clicked objects
+  const firstCard = shuffledDeck[firstPickIdx];
+  const secondCard = shuffledDeck[secondPickIdx];
+
+  //Then compare the cards
+  const isMatch = firstCard.name === secondCard.name;
+
+
+  // If the two selected cards match
+  if (isMatch) {
+    // Permanently mrkthe as matched
+    firstCard.matched = true;
+    secondCard.matched = true;
+    //Update the board
+    matchesFound += 1;
+
+    // Reset the state slection- funciton defined below
+    resetPicks();
+    //allow clicks again
+    lockBoard = false;
+
+    // Win condition
+    if (matchesFound === totalMatches) {
+      gameStatus = "Won";
+    }
+
+    // Update HUD
+    render();
+    return;
+  }
+
+  // not a match => wrong guess
+  wrongGuessesMade += 1;
+  // Update HUD
+  render();
+
+  // lose condition
+  if (wrongGuessesMade >= totalWrongGuesses) {
+    gameStatus = "Lost";
+    lockBoard = false;
+    render();
+    return;
+  }
+
+  // show both cards for a moment, then flip back 
+  // Run the function once, after waiting milliseconds (callback, delay)
+  setTimeout(() => {
+    // sets revealed= false, and updates the face-down image
+    hideCard(firstPickIdx);
+    hideCard(secondPickIdx);
+
+    // Sets first and seconf pick index to null 
+    // so the games is ready for the next turn
+    resetPicks();
+    //The player can click again
+    lockBoard = false;
+    //Update HUD
+    render();
+    // 850 ms- how long the player sees the cards 
+  }, 850);
+}
+
+
