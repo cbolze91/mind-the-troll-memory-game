@@ -180,4 +180,23 @@ function handleBoardClick(evt) {
   checkForMatch();
 }
 
+// After the card is clicked- show it as face-up
+// 1. Mark card as revealed
+// 2. Find the card element
+// 3. Show the card image
+function revealCard(idx) {
+    // get the clicked card object and mark it as revealed
+  shuffledDeck[idx].revealed = true;
+  // Selexts the card element on the page that corresponds th this index
+  const cardEl = getCardElByIndex(idx);
+  // Sets inline css for the card face image
+  // so when its clicked this image will be revealed
+  cardEl.style.backgroundImage = `url("${shuffledDeck[idx].cardValue}")`;
+// Set aria-label for accessibility
+  cardEl.setAttribute(
+    "aria-label",
+    `Revealed ${shuffledDeck[idx].name} gem`
+  );
+}
+
 
