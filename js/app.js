@@ -45,3 +45,17 @@ function init() {
   render();        // Update HUD + message
 }
 
+function buildDeck() {
+    //spread method to duplicate and double the cards array and .map transform the array so it has some extra properties.
+  return [...cards, ...cards].map((card, idx) => {
+    return {
+      id: idx, // Gives each card a unique id
+      name: card.name,
+      cardValue: card.cardValue,
+      matched: false, // Needed for game state, and prevents clicking matched cards again.
+      revealed: false, // Tracks whether the card is face-up
+    };
+  });
+}
+
+
