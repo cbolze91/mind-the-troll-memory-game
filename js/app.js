@@ -199,12 +199,18 @@ function revealCard(idx) {
   );
 }
 
-
 // Will be called to flip cards back if not matched
 function hideCard(idx) {
   shuffledDeck[idx].revealed = false;
   const cardEl = getCardElByIndex(idx);
   cardEl.style.backgroundImage = `url("${cardFront}")`;
   cardEl.setAttribute("aria-label", "Face down card");
+}
+
+// Finds the card in the board that has that specific index- built dynamically
+function getCardElByIndex(idx) {
+    // the template literal builds from the card class, and the data-set attribute
+    // then uses the selected index
+  return boardEl.querySelector(`.card[data-index="${idx}"]`);
 }
 
