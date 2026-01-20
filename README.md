@@ -16,7 +16,7 @@ Game status, remaining guesses, and messages are displayed in the HUD above the 
 ## 🚀 Getting Started
 
 ### Play the Game
-👉 **Live Game:**  
+👉 **Live Game:**   https://cbolze91.github.io/mind-the-troll-memory-game/
 
 ### Planning Materials
 1) User Stories

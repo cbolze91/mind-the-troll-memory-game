@@ -3,6 +3,7 @@
 // And it's more dynamic
 // because changes to the deck automatically update the board
 
+
 const cards = [
   { name: "red", cardValue: "../assets/images/red-gem.png" },
   { name: "blue", cardValue: "../assets/images/blue-gem.png" },
