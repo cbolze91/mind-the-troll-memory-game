@@ -200,3 +200,11 @@ function revealCard(idx) {
 }
 
 
+// Will be called to flip cards back if not matched
+function hideCard(idx) {
+  shuffledDeck[idx].revealed = false;
+  const cardEl = getCardElByIndex(idx);
+  cardEl.style.backgroundImage = `url("${cardFront}")`;
+  cardEl.setAttribute("aria-label", "Face down card");
+}
+
