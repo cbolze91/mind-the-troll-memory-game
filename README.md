@@ -1,5 +1,5 @@
 # 🧌 Mind the Troll
-
+![Troll Crossing Sign](https://images.unsplash.com/photo-1589176600546-989752940b4b?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 **Mind the Troll** is a browser-based memory matching game where the player must match pairs of magical gems to cross a bridge guarded by a hungry troll. Match all six pairs before you run out of wrong guesses — or the troll feasts.
 
 This project was built as part of General Assembly's Software Engineering class projects to practic DOM manipulation, game logic, and state management using JavaScript.
@@ -18,7 +18,7 @@ Game status, remaining guesses, and messages are displayed in the HUD above the 
 ## 🚀 Getting Started
 
 ### Play the Game
-👉 **Live Game:**   https://cbolze91.github.io/mind-the-troll-memory-game/
+👉 **Live Game:**   [Play Live Game Here!](https://cbolze91.github.io/mind-the-troll-memory-game/)
 
 ### Planning Materials
 ### User Stories
