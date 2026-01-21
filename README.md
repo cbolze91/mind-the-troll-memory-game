@@ -194,6 +194,7 @@ FUNCTION init():
 
  - https://www.youtube.com/watch?v=DABkhfsBAWw&t=359s
 
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout
 
 ## Next Steps
 

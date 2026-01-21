@@ -30,7 +30,7 @@ h1 {
 creates an animation recipe called text-glow */
 @keyframes text-glow {
     from {
-        /* Small gold glow */
+        /* dim gold glow */
         text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
     }
 
