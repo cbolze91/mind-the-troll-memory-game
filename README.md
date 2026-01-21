@@ -203,5 +203,5 @@ FUNCTION init():
 - Add evil laugh sound effect to start of game
 - Clean up card transitions
 - Improve Accessibility
-- Add a short intro viseo
+- Add a short intro video
 - Add difficulty levels
