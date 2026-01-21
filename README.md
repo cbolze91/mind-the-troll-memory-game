@@ -2,6 +2,8 @@
 
 **Mind the Troll** is a browser-based memory matching game where the player must match pairs of magical gems to cross a bridge guarded by a hungry troll. Match all six pairs before you run out of wrong guesses — or the troll feasts.
 
+This project was built as part of General Assembly's Software Engineering class projects to practic DOM manipulation, game logic, and state management using JavaScript.
+
 ## 🎮 How to Play
 
 - Click two cards to flip them over  
