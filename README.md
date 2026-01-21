@@ -81,7 +81,8 @@ FUNCTION init():
   - // BUILD the board in the DOM using cards
   - // SET starting troll message: "Match the gems and I’ll let you live…"
   - // CALL render()
-F. Render (state → DOM)
+
+### F. Render (state → DOM)
 - // FUNCTION render():
   - // UPDATE wrong guesses left display (maxWrongGuesses - wrongGuesses)
   - // UPDATE matches display (matchesFound out of totalPairs)
